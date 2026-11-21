@@ -1,0 +1,20 @@
+name: Open World Browser Smoke Test
+on:
+  push:
+    branches: [game-testing-2026-11-21]
+  workflow_dispatch:
+jobs:
+  browser-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Run real Chromium gameplay smoke tests
+        run: node tests/open-world.browser.cjs
