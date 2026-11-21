@@ -1,6 +1,5 @@
-/* Public browser configuration. Replace values only after creating Supabase project.
-   Never place Supabase service_role or other secret keys here. */
+/* Public Supabase URL and publishable key only. Never put secret/service-role keys here. */
 window.ATCG_BACKEND = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://wgfkxhyeexvrghahuswl.supabase.co",
+  supabaseAnonKey: "sb_publishable_Dm81-ThTupMEYh7Q5RGbEA_pvklgfa-"
 };
