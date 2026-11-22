@@ -16,4 +16,4 @@ if(mode==='cell'){let difference=val('outside')-val('inside');let expected=[-30,
 if(mode==='farm'){let target=[75,35,55][round];n=clamp(100-Math.abs(val('irrigation')-target)*.65-Math.max(0,val('fertilizer')-55)*.45+val('soil')*.15);h='Soil conservation supports resilience. Too much irrigation or fertilizer can waste resources or increase runoff.'}
 window.current=clamp(n);$('outcome').textContent='Sustainability / mission success: '+window.current+'%';$('meter').style.width=window.current+'%';$('hint').textContent=h}
 function msg(x){$('feedback').textContent=x}function commit(){let earned=window.current;score+=earned;round++;msg('You earned '+earned+' points. Next scenario unlocked.');setup()}
-</script></body></html>
+</script><script defer src="atcg-challenge-engine.js"></script></body></html>
