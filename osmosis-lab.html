@@ -13,4 +13,4 @@ document.getElementById('run').onclick=()=>{const diff=Number(inside.value)-Numb
 document.getElementById('reset').onclick=()=>{outside.value=5;inside.value=10;update();prediction=null;cell.style.transform='scale(1)';document.getElementById('choice').textContent='Choose a prediction.';document.getElementById('observation').textContent='Set your concentrations and run the experiment.';document.getElementById('feedback').textContent=''};
 document.getElementById('hint').onclick=()=>document.getElementById('hintText').textContent='Compare the salt concentration inside and outside. Which side has more dissolved solute? Water moves toward that side.';
 const p=document.getElementById('particles');for(let i=0;i<30;i++){const e=document.createElement('span');e.className='particle';e.style.left=((i*37+11)%95)+'%';e.style.top=((i*53+7)%90)+'%';p.appendChild(e)}
-</script></body></html>
+</script><script defer src="atcg-challenge-engine.js"></script></body></html>
